@@ -1,0 +1,26 @@
+{
+  "name": "hello_gql",
+  "version": "1.0.0",
+  "description": "simple GraphQL API with Express, Mongoose and Apollo Server",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrikPolkki/hello_gql.git"
+  },
+  "author": "Patrik Pölkki",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PatrikPolkki/hello_gql/issues"
+  },
+  "homepage": "https://github.com/PatrikPolkki/hello_gql#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.6.7",
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
+  }
+}
