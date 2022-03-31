@@ -1,17 +1,18 @@
-const categoryData = [
-  {
-    id: "1",
-    categoryName: "Mammal",
-  },
-];
+import Category from '../models/categoryModel';
 
 export default {
   Species: {
-    category(parent) {
-      console.log("species", parent);
-      return categoryData
-        .filter((category) => category.id === parent.category)
-        .pop();
+    category(parent, args) {
+      console.log('category', parent);
+      return Category.findById(parent.id);
+    },
+  },
+  Mutation: {
+    addCategory: (parent, args) => {
+      console.log('categoryResolver, addCategory', args);
+      const newCategory = new Category(args);
+      return newCategory.save();
     },
   },
 };
+
