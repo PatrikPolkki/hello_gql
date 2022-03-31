@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -6,8 +6,8 @@ const animal = new Schema({
   animalName: String,
   species: {
     type: mongoose.Types.ObjectId,
-    ref: "Species",
+    ref: 'Species',
   },
 });
 
-export default mongoose.model("Animal", animal);
+export default mongoose.model('Animal', animal);

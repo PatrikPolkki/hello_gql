@@ -3,8 +3,8 @@ import Species from '../models/speciesModel';
 export default {
   Animal: {
     species(parent) {
-      console.log("species", parent);
-      return Species.findById(parent.id)
+      console.log('species', parent);
+      return Species.findById(parent.id);
     },
   },
   Mutation: {

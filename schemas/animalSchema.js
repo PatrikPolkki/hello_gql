@@ -1,5 +1,5 @@
 // schema/animalSchema.js
-import { gql } from "apollo-server-express";
+import {gql} from 'apollo-server-express';
 
 export default gql`
   extend type Query {

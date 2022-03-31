@@ -1,5 +1,5 @@
 // resolvers/animalResolver.js
-import Animal from '../models/animalModel'
+import Animal from '../models/animalModel';
 
 export default {
   Query: {
