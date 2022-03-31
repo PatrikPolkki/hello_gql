@@ -2,16 +2,16 @@ import Species from '../models/speciesModel';
 
 export default {
   Animal: {
-    species(parent) {
+    async species(parent) {
       console.log('species', parent);
-      return Species.findById(parent.id);
+      return await Species.findById(parent.species);
     },
   },
   Mutation: {
-    addSpecies: (parent, args) => {
+    addSpecies: async (parent, args) => {
       console.log('speciesResolver, addSpecies', args);
       const newSpecies = new Species(args);
-      return newSpecies.save();
+      return await newSpecies.save();
     },
   },
 };

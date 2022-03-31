@@ -1,6 +1,7 @@
 //module is in strict mode by default ;)
-import mongoose from "mongoose";
-import dotenv from "dotenv";
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
 dotenv.config();
 
 (async () => {
@@ -9,9 +10,9 @@ dotenv.config();
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("DB connected successfully");
+    console.log('DB connected successfully');
   } catch (e) {
-    console.error("Connection to db failed: ", e);
+    console.error('Connection to db failed: ', e);
   }
 })();
 

@@ -2,16 +2,16 @@ import Category from '../models/categoryModel';
 
 export default {
   Species: {
-    category(parent, args) {
+    async category(parent, args) {
       console.log('category', parent);
-      return Category.findById(parent.id);
+      return await Category.findById(parent.category);
     },
   },
   Mutation: {
-    addCategory: (parent, args) => {
+    addCategory: async (parent, args) => {
       console.log('categoryResolver, addCategory', args);
       const newCategory = new Category(args);
-      return newCategory.save();
+      return await newCategory.save();
     },
   },
 };
